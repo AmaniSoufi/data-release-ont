@@ -1,0 +1,62 @@
+@prefix ns1: <https://auroral.iot.linkeddata.es/def/tourism#> .
+@prefix ns2: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix ns3: <http://xmlns.com/foaf/0.1/> .
+@prefix ns4: <http://publications.europa.eu/resource/authority/currency/> .
+@prefix ns5: <http://lexvo.org/ontology> .
+@prefix ns6: <http://www.opengis.net/ont/sf#> .
+@prefix ns7: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:Constantine a ns1:TourismDestination;
+                ns7:title "السياحة في قسنطينة، الجزائر"^^xsd:string;
+                ns7:description "قسنطينة، المعروفة بمدينة الجسور المعلقة، تعد من أجمل المدن الجزائرية، حيث تضم العديد من المعالم التاريخية والطبيعية."^^xsd:string;
+                ns2:lat "36.3650"^^xsd:float;
+                ns2:long "6.6147"^^xsd:float;
+                ns1:hasAttraction ns1:BridgeSidiMcid, ns1:AhmedBeyPalace, ns1:Medina, ns1:RomanRuins;
+                ns1:hasHotel ns1:HotelConstantine, ns1:HotelIbis, ns1:HotelMarriott.
+
+# المعالم السياحية
+ns1:BridgeSidiMcid a ns1:Attraction;
+                   ns7:title "جسر سيدي مسيد"^^xsd:string;
+                   ns7:description "يعتبر أعلى جسر معلق في قسنطينة، ويوفر إطلالة رائعة على الوادي."^^xsd:string.
+
+ns1:AhmedBeyPalace a ns1:Attraction;
+                   ns7:title "قصر أحمد باي"^^xsd:string;
+                   ns7:description "قصر تاريخي يعكس العمارة العثمانية ويضم زخارف فريدة."^^xsd:string.
+
+ns1:Medina a ns1:Attraction;
+           ns7:title "المدينة القديمة"^^xsd:string;
+           ns7:description "تمثل قلب قسنطينة التاريخي، حيث الأسواق القديمة والمباني التقليدية."^^xsd:string.
+
+ns1:RomanRuins a ns1:Attraction;
+               ns7:title "الآثار الرومانية"^^xsd:string;
+               ns7:description "تحتوي قسنطينة على العديد من المواقع الأثرية الرومانية مثل بقايا الجسور والحمامات."^^xsd:string.
+
+# الفنادق
+ns1:HotelConstantine a ns1:Hotel;
+                     ns7:title "فندق قسنطينة"^^xsd:string;
+                     ns7:description "فندق فاخر يقدم خدمات راقية وإطلالة رائعة على المدينة."^^xsd:string;
+                     ns1:price ns1:Price1.
+
+ns1:HotelIbis a ns1:Hotel;
+              ns7:title "فندق إيبيس"^^xsd:string;
+              ns7:description "فندق اقتصادي يوفر إقامة مريحة بأسعار معقولة."^^xsd:string;
+              ns1:price ns1:Price2.
+
+ns1:HotelMarriott a ns1:Hotel;
+                  ns7:title "فندق ماريوت"^^xsd:string;
+                  ns7:description "فندق 5 نجوم يوفر تجربة فاخرة في قلب المدينة."^^xsd:string;
+                  ns1:price ns1:Price3.
+
+# الأسعار
+ns1:Price1 a ns1:Price;
+           ns1:amount "100"^^xsd:integer;
+           ns1:inCurrency ns4:DZD.
+
+ns1:Price2 a ns1:Price;
+           ns1:amount "50"^^xsd:integer;
+           ns1:inCurrency ns4:DZD.
+
+ns1:Price3 a ns1:Price;
+           ns1:amount "200"^^xsd:integer;
+           ns1:inCurrency ns4:DZD.
